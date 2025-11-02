@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedList", "LinkedList", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{2F1A7DDA-B084-4459-AF3C-49B3EF850B28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashing", "Hashing\Hashing.csproj", "{2C0997D2-28B0-C68A-2429-35F9FCB06949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{59A0187D-5705-8449-9F4A-B523006DB196}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{2F1A7DDA-B084-4459-AF3C-49B3EF850B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1A7DDA-B084-4459-AF3C-49B3EF850B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F1A7DDA-B084-4459-AF3C-49B3EF850B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0997D2-28B0-C68A-2429-35F9FCB06949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0997D2-28B0-C68A-2429-35F9FCB06949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0997D2-28B0-C68A-2429-35F9FCB06949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0997D2-28B0-C68A-2429-35F9FCB06949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A0187D-5705-8449-9F4A-B523006DB196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A0187D-5705-8449-9F4A-B523006DB196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A0187D-5705-8449-9F4A-B523006DB196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A0187D-5705-8449-9F4A-B523006DB196}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

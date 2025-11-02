@@ -8,7 +8,7 @@ namespace DesignPatterns
         public async Task CallAllPatterns()
         {
             // Call Strategy Pattern
-            new SimUDuckApp().ExecuteSimUDuck();
+            // new SimUDuckApp().ExecuteSimUDuck();
 
             // Call Singleton Pattern
             await new Singleton().ExecuteSingletonAsync();

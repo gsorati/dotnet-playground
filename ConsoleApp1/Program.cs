@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
 using DesignPatterns;
 
 namespace Programs
 {
     public class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            new AllPrograms().CallPrograms();
-            // new AllPatterns().CallAllPatterns();
+            // new AllPrograms().CallPrograms();
+            await new AllPatterns().CallAllPatterns();
         }
     }
 }

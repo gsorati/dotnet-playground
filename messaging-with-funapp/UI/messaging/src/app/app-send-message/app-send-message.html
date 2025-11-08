@@ -1,0 +1,6 @@
+<div style="padding:20px">
+  <h2>Send Message to Service Bus</h2>
+  <input [(ngModel)]="message" placeholder="Type your message here..." />
+  <button (click)="sendMessage()">Send</button>
+  <p *ngIf="response">{{ response }}</p>
+</div>

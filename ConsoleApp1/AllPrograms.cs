@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StackExchange.Redis;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -40,6 +41,11 @@ namespace Programs
 
             /* processes an integer array(input) level by level in a binary tree - like pattern, where each "level" has double the number of elements as the previous.At each level, it counts how many odd numbers exist, stores that count, and finally prints the level with the maximum odd numbers. */
             FindMaxOddCountLevel(new int[] { 1, 3, 3, 4, 5, 7, 9 });
+
+            ////Console.WriteLine("Input with string 'abcdef' and element 2");
+            ////AllPrograms.ConsumeString("abcdef", 2);
+            ////Console.WriteLine("Input with string 'abcdef' and element 3");
+            ////AllPrograms.ConsumeString("abcdef", 3);
 
             // Hashing
             ////new Hashing().CallPrograms();
@@ -119,6 +125,55 @@ namespace Programs
             }
 
             Console.WriteLine($"index: {maxOddIndex} - num: {maxOddNum}");
+        }
+
+
+        ////The function will:
+        ////- Consume characters by printing them 
+        ////- First consume every nth character in the input
+        ////- Then consume every nth character from character that were not consumed in the previous pass
+        ////- A new line should be printed between passes
+        ////- Continue until there are no characters left that can be consumed
+        ////Function: void ConsumeString(s, n)
+        ////Example 1:
+        ////ConsumeString("abcdef", 2)
+        ////bdf
+        ////с
+        ////e
+        ////a
+        ////Example 2:
+        ////ConsumeString("abcdef", 3)
+        ////cf
+        ////d
+        ////e
+        ////ab
+
+        public static void ConsumeString(string str, int n)
+        {
+            List<char> consumeChars = str.ToList();
+            while (true)
+            {
+                if (consumeChars.Count == 0)
+                    break;
+
+                List<char> consumeList = new List<char>();
+                List<char> remaining = new List<char>();
+                for (var i = 0; i < consumeChars.Count; i++)
+                {
+                    var postition = i + 1;
+                    if (postition % n == 0)
+                        consumeList.Add(consumeChars[i]);
+                    else
+                        remaining.Add(consumeChars[i]);
+                }
+
+                if (consumeList.Count == 0)
+                    break;
+                Console.WriteLine(consumeList.ToArray());
+                consumeChars = remaining;
+            }
+
+            Console.WriteLine(consumeChars.ToArray());
         }
     }
 
@@ -772,6 +827,5 @@ namespace Programs
         {
 
         }
-
     }
 }
